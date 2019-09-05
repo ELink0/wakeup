@@ -12,11 +12,10 @@ class Semaforo:
             self.processoDormindo.append(processo)
 
     def up(self, processo):
-        if self.processoDormindo == None:
+        if len(self.processoDormindo) == 0:
             self.contador += 1
         else:
-            random.choice(processoDormindo)
-            down()
-
+            escolhido = random.choice(processoDormindo)
+            self.processoDormindo.delete(processo)
 
 class Processo:
